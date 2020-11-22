@@ -1,0 +1,15 @@
+{
+  "name": "swsf",
+  "version": "1.0.0",
+  "description": "Software for the swsfonline.com forums",
+  "main": "build/index.js",
+  "author": "Greg Fisher <greg@gnfisher.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "cd ./server && yarn install && yarn start",
+    "build": "yarn tsc -b server"
+  }
+}
