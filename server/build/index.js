@@ -14,6 +14,6 @@ app.get('*', function (_, res) {
     res.sendFile(path_1.default.join(path_1.default.resolve('../') + '/client/build/index.html'));
 });
 var PORT = 3000;
-app.listen(PORT, function () {
+app.listen(process.env.PORT || PORT, function () {
     console.log("\u26A1\uFE0F [server]: Server is running at https://localhost:" + PORT);
 });

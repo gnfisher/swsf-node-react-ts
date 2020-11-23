@@ -14,6 +14,6 @@ app.get('*', (_, res) => {
 });
 
 const PORT = 3000
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`⚡️ [server]: Server is running at https://localhost:${PORT}`)
 })
