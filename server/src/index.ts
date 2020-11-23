@@ -1,13 +1,19 @@
 import express from "express"
+import path from "path"
 
 const app = express()
 
-const PORT = 3001
+app.use(express.static(path.join(path.resolve('../'), 'client/build')))
 
-app.get('/', (_, res) => {
-  res.send('Hello, world...')
+app.get('/api/hello', (_, res) => {
+  res.json('Hello, world...')
 })
 
+app.get('*', (_, res) => {
+  res.sendFile(path.join(path.resolve('../')+'/client/build/index.html'));
+});
+
+const PORT = 3000
 app.listen(PORT, () => {
   console.log(`⚡️ [server]: Server is running at https://localhost:${PORT}`)
 })
