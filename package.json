@@ -5,12 +5,16 @@
   "main": "build/index.js",
   "author": "Greg Fisher <greg@gnfisher.com>",
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "scripts": {
+    "install": "(cd server && yarn) && (cd client && yarn)",
+    "start": "concurrently \"cd server && yarn start\" \"cd client && yarn start\"",
+    "build": "rimraf ./sever/build && rimraf ./client/build && concurrently \"yarn tsc -b server\" \"cd client && yarn build\"",
+    "heroku-postbuild": "yarn build"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.1.2"
-  },
-  "scripts": {
-    "start": "concurrently \"cd ./server && yarn install && yarn start\" \"cd ./client && yarn install && yarn start \"",
-    "build": "rimraf ./sever/build && rimraf ./client/build && concurrently \"yarn tsc -b server\" \"cd client && yarn build\""
   }
 }
