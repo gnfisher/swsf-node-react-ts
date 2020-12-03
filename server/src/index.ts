@@ -1,5 +1,5 @@
-import express from "express"
-import path from "path"
+import express from 'express'
+import path from 'path'
 
 const app = express()
 
@@ -10,8 +10,8 @@ app.get('/api/hello', (_, res) => {
 })
 
 app.get('*', (_, res) => {
-  res.sendFile(path.join(path.resolve('../')+'/client/build/index.html'));
-});
+  res.sendFile(path.join(path.resolve('../') + '/client/build/index.html'))
+})
 
 const PORT = 3000
 app.listen(process.env.PORT || PORT, () => {
