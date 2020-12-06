@@ -1,4 +1,4 @@
-# Express, React, and Typescript sittin' in a tree
+# Full Stack TypeScript: Express, React, and Typescript
 
 This is my hobby project where I will be [Learning In
 Public][swyx-learn-public] about full-stack Typescript applications! The goal is
@@ -6,33 +6,33 @@ to build a forum-like software for an online, text-based RPG I am involved with
 using an Express-powered API, React as the client, and Typescript. Specifically,
 I'm curious to learn:
 
-  * What's it like working in Typescript, and how much of what I love about
-    Scala and Elm can I replicate in TS?
-  * What's involved in putting a project together? Coming from Rails, I'm pretty
-    spoiled and lazy...
-  * Using API types for the expected response/request for an endpoint like the
-    [example in this video][gary-video-types] from [Gary
-    Bernhardt](https://twitter.com/garybernhardt).
+- What's it like working in Typescript, and how much of what I love about
+  Scala and Elm can I replicate in TS?
+- What's involved in putting a project together? Coming from Rails, I'm pretty
+  spoiled and lazy.
+- Using API types for the expected response/request for an endpoint like the
+  [example in this video][gary-video-types] from [Gary
+  Bernhardt](https://twitter.com/garybernhardt).
+- How fast can I work? Taking into account all the initial onboarding and
+  learning, can I see myself being productive with this stack in the future?
 
-## 💪 📖 🕶 Motivation
+## The Stack and libraries I'd like to use 📚
 
-I've been working on a project at [thoughtbot][tb] for the
-last year that uses a Scala server and an Elm frontend. It's been a lot of fun
-but it is a difficult tech stack to onboard folks into. After watching the
-[video from Gary I mentioned above][gary-video-types] and reading about
-[io-ts][io-ts] I got excited about recreating some of the DX of the Scala/Elm
-project in a full stack Typescript setup.
-
-Will it be as nice? Is it even *possible*?
-
-I want to find out!
+- [Express.js](https://expressjs.com) for the API server.
+- [React](https://reactjs.org) for the client.
+- [Postgres](https://www.postgresql.org) for the database.
+- [TypeScript](https://www.typescriptlang.org) for the types!
+- [io-ts](https://github.com/gcanti/io-ts) for typing the API.
+- [TailwindCSS](https://tailwindcss.com) for styling the front end.
 
 [tb]: https://thoughtbot.com
 [swyx-learn-public]: https://www.swyx.io/learn-in-public/
 [gary-video-types]: https://www.youtube.com/watch?v=GrnBXhsr0ng
 [io-ts]: https://github.com/gcanti/io-ts
 
-## Things I'm using to learn and move forward...
+## Installation
 
-* [mattvukas/react-node-template](https://github.com/mattvukas/react-node-template)
-  - An example setup, sans-Typescript, that my setup is based on.
+From the root of the project run:
+
+- `yarn install`
+- `yarn build && yarn start`
