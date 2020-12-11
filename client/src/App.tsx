@@ -1,15 +1,16 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 function App() {
+  return <Header />
+}
+
+function Header() {
   return (
-    <div>
-      <nav className="max-w-7xl mx-auto">
-        <div>
-          <img src={logo} alt="React Logo" />
-        </div>
-      </nav>
+    <div className="w-full border-b-2 border-gray-100">
+      <div className="p-3 mx-auto lg:max-w-screen-lg">
+        <div className="font-semibold">Star Wars Sim Forum</div>
+      </div>
     </div>
   )
 }
