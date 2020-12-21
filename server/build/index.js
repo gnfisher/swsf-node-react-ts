@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var path_1 = __importDefault(require("path"));
 var app = express_1.default();
-app.use(express_1.default.static(path_1.default.join(path_1.default.resolve('../'), 'client/build')));
+app.use(express_1.default.static(path_1.default.join(path_1.default.resolve('../'), 'client/dist')));
 app.get('/api/hello', function (_, res) {
     res.json('Hello, world...');
 });

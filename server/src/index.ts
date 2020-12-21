@@ -3,7 +3,7 @@ import path from 'path'
 
 const app = express()
 
-app.use(express.static(path.join(path.resolve('../'), 'client/build')))
+app.use(express.static(path.join(path.resolve('../'), 'client/dist')))
 
 app.get('/api/hello', (_, res) => {
   res.json('Hello, world...')
